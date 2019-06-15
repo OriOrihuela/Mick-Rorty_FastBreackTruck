@@ -24,7 +24,6 @@ public class Desayuno {
         return items;
     }
 
-
     /* ---- MAIN BEHAVIOURS ---- */
     public void addCerealOrDrink(Item item) {
         getItems().add(item);
