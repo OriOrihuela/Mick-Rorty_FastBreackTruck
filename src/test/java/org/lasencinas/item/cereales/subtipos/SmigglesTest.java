@@ -1,20 +1,42 @@
 package org.lasencinas.item.cereales.subtipos;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.lasencinas.item.cereales.Cereales;
+import org.lasencinas.packing.objetos.Caja;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class SmigglesTest {
 
-    @Test
-    public void nombre() {
+    /* ---- PROPERTIES ---- */
+    private Cereales smiggles = null;
+
+
+    /* ---- BEFORE ---- */
+    @Before
+    public void setUp() {
+        smiggles = new Smiggles();
     }
 
     @Test
-    public void empaquetado() {
+    public void notNullTest() {
+        assertNotNull(smiggles);
     }
 
     @Test
-    public void pvp() {
+    public void nombreTest() {
+        assertEquals("Smiggles", smiggles.nombre());
+    }
+
+    @Test
+    public void empaquetadoTest() {
+        assertEquals(Caja.class, smiggles.empaquetado().getClass());
+    }
+
+    @Test
+    public void pvpTest() {
+        assertEquals(50, smiggles.pvp(), 0.01);
     }
 }
