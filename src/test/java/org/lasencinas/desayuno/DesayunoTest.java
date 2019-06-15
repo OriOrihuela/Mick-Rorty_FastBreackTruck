@@ -42,12 +42,12 @@ public class DesayunoTest {
 
     /* ---- TESTS ---- */
     @Test
-    public void getItems() {
+    public void getItemsTest() {
         assertNotNull(desayuno.getItems());
     }
 
     @Test
-    public void addCerealOrDrink() {
+    public void addCerealOrDrinkTest() {
         assertNotNull(eyeholes);
         assertNotNull(turbulentJuice);
 
@@ -58,7 +58,7 @@ public class DesayunoTest {
     }
 
     @Test
-    public void addToy() {
+    public void addToyTest() {
         assertNotNull(plumbus);
 
         desayuno.addCerealOrDrink(eyeholes);
@@ -81,7 +81,7 @@ public class DesayunoTest {
     }
 
     @Test
-    public void mostrarItems() {
+    public void mostrarItemsTest() {
         desayuno.addCerealOrDrink(eyeholes);
         desayuno.addCerealOrDrink(turbulentJuice);
         try {
@@ -93,7 +93,7 @@ public class DesayunoTest {
     }
 
     @Test
-    public void getCoste() {
+    public void getCosteTest() {
         assertEquals(0, desayuno.getCoste(), 0.01);
 
         desayuno.addCerealOrDrink(eyeholes);
