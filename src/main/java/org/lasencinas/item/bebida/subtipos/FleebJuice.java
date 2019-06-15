@@ -16,7 +16,7 @@ public class FleebJuice extends Bebida {
     }
 
 
-    /* ---- MAIN BEHAVIORUS ---- */
+    /* ---- MAIN BEHAVIOURS ---- */
     @Override
     public String nombre() {
         return tubo.envoltorio();
