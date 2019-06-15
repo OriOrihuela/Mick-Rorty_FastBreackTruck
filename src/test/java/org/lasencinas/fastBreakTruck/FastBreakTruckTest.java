@@ -14,7 +14,7 @@ public class FastBreakTruckTest {
 
     /* ---- TESTS ---- */
     @Test
-    public void prepararEyeHoles() {
+    public void prepararEyeHolesTest() {
         desayuno = FastBreakTruck.prepararEyeHoles();
         assertNotNull(desayuno);
         assertEquals(2, desayuno.getItems().size());
@@ -22,7 +22,7 @@ public class FastBreakTruckTest {
     }
 
     @Test
-    public void prepararSmiggles() {
+    public void prepararSmigglesTest() {
         desayuno = FastBreakTruck.prepararSmiggles();
         assertNotNull(desayuno);
         assertEquals(2, desayuno.getItems().size());
@@ -30,7 +30,7 @@ public class FastBreakTruckTest {
     }
 
     @Test
-    public void incluirJuguete() {
+    public void incluirJugueteTest() {
         desayuno = FastBreakTruck.prepararEyeHoles();
         FastBreakTruck.incluirJuguete(desayuno);
         assertEquals(3, desayuno.getItems().size());
