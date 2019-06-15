@@ -1,20 +1,41 @@
 package org.lasencinas.item.bebida.subtipos;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.lasencinas.item.bebida.Bebida;
+import org.lasencinas.packing.objetos.Tubo;
 
 import static org.junit.Assert.*;
 
 public class FleebJuiceTest {
 
-    @Test
-    public void nombre() {
+    /* ---- PROPERTIES ---- */
+    private Bebida fleebJuice = null;
+
+
+    /* ---- BEFORE ---- */
+    @Before
+    public void setUp() {
+        fleebJuice = new FleebJuice();
     }
 
     @Test
-    public void empaquetado() {
+    public void notNullTest() {
+        assertNotNull(fleebJuice);
     }
 
     @Test
-    public void pvp() {
+    public void nombreTest() {
+        assertEquals("FleebJuice", fleebJuice.nombre());
+    }
+
+    @Test
+    public void empaquetadoTest() {
+        assertEquals(Tubo.class, fleebJuice.empaquetado().getClass());
+    }
+
+    @Test
+    public void pvpTest() {
+        assertEquals(35, fleebJuice.pvp(), 0.01);
     }
 }
