@@ -90,6 +90,13 @@ public class DesayunoTest {
             e.printStackTrace();
         }
         desayuno.mostrarItems();
+
+        /**
+         * Must print:
+         * Item: Eyeholes, Empaquetado: caja, Precio: 25.0
+         * Item: TurbulentJuice, Empaquetado: tubo, Precio: 30.0
+         * Item: Plumbus, Empaquetado: caja, Precio: 100.0
+         */
     }
 
     @Test
